@@ -1,0 +1,744 @@
+@charset "UTF-8";
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+html,
+button,
+input,
+select,
+textarea {
+  color: white;
+}
+
+body {
+  background-image: url(../img/bg-body.gif);
+  background-repeat: repeat;
+  background-color: #000;
+  line-height: 1.5;
+  font-family: Arial, Century Gothic, Verdana, Roboto, "Droid Sans", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  color: white;
+}
+
+a {
+  color: #869791;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+a:focus {
+  text-decoration: none;
+}
+
+.box-left {
+  float: left;
+}
+
+.box-right {
+  float: right;
+}
+
+.txt-left {
+  text-align: left;
+}
+
+.txt-right {
+  text-align: right;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.m0 {
+  margin: 0 !important;
+}
+
+.ml10 {
+  margin-left: 10px !important;
+}
+
+.mr10 {
+  margin-right: 10px !important;
+}
+
+.ml15 {
+  margin-left: 15px !important;
+}
+
+.mr15 {
+  margin-right: 15px !important;
+}
+
+.ml20 {
+  margin-left: 20px !important;
+}
+
+.mr20 {
+  margin-right: 20px !important;
+}
+
+.ml25 {
+  margin-left: 25px !important;
+}
+
+.mr25 {
+  margin-right: 25px !important;
+}
+
+.ml30 {
+  margin-left: 30px !important;
+}
+
+.mr30 {
+  margin-right: 30px !important;
+}
+
+.ml35 {
+  margin-left: 35px !important;
+}
+
+.mr35 {
+  margin-right: 35px !important;
+}
+
+.ml40 {
+  margin-left: 40px !important;
+}
+
+.mr40 {
+  margin-right: 40px !important;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #ff7c5f;
+  text-shadow: none;
+}
+
+::selection {
+  background: #ff7c5f;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  margin: 1em 0;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+img {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   各種スタイル
+   ========================================================================== */
+.wrap {
+  width: 50em;
+  margin: 0 auto;
+}
+
+@media (max-width: 50em) {
+  .wrap {
+    width: 98%;
+    padding: 0 1%;
+  }
+}
+/* うちのロゴ */
+.ci {
+  float: left;
+  width: 50%;
+}
+.ci img {
+  display: block;
+  width: 100%;
+  height: auto;
+  width: 82%;
+  margin: 0 auto;
+}
+
+@media (max-width: 46em) {
+  .ci {
+    float: none;
+    width: 100%;
+  }
+  .ci img {
+    width: 280px;
+  }
+}
+.menubtn {
+  display: none;
+}
+
+@media (max-width: 46em) {
+  .menubtn {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 10px;
+  }
+  .menubtn img {
+    width: 54px;
+  }
+}
+/* グロナビ */
+.gnav {
+  float: left;
+  width: 50%;
+  font-size: 1.25em;
+}
+.gnav ul {
+  margin: 1em 0;
+  list-style: none;
+}
+.gnav a {
+  color: #fff;
+}
+
+@media (max-width: 46em) {
+  .gnav {
+    display: none;
+    float: none;
+    width: 100%;
+  }
+  .gnav ul {
+    padding: 0;
+  }
+  .gnav li {
+    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.8);
+  }
+  .gnav li:nth-child(2n) {
+    background-color: #222;
+    background-color: rgba(34, 34, 34, 0.8);
+  }
+  .gnav a {
+    display: block;
+    padding: .2em 0;
+  }
+}
+/* メインコピー */
+.maincopy-outer {
+  clear: both;
+  text-align: center;
+}
+
+.maincopy {
+  font-size: 1.5em;
+}
+
+/* SNS */
+.sns {
+  margin: 1em 0;
+  padding: 0;
+  list-style: none;
+}
+.sns li {
+  float: left;
+}
+
+/* セクションタイトル */
+.stitle {
+  text-align: center;
+  border-radius: 2px;
+}
+
+#stitle-about .stitle {
+  background-color: #009943;
+  background-color: rgba(0, 153, 67, 0.7);
+}
+
+#stitle-do .stitle {
+  background-color: #e50011;
+  background-color: rgba(229, 0, 17, 0.7);
+}
+
+#stitle-folio .stitle {
+  background-color: #fff000;
+  background-color: rgba(255, 240, 0, 0.7);
+  color: #000;
+}
+
+#stitle-sche .stitle {
+  background-color: #1c1f87;
+  background-color: rgba(28, 31, 135, 0.7);
+}
+
+#stitle-inquiry .stitle {
+  background-color: #e4007e;
+  background-color: rgba(228, 0, 126, 0.7);
+}
+
+#stitle-others .stitle {
+  background-color: #00a0e8;
+  background-color: rgba(0, 160, 232, 0.7);
+}
+
+#stitle-bility .stitle {
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #000;
+}
+
+.stitle-sub {
+  text-align: center;
+}
+.stitle-sub:before {
+  content: "ー ";
+}
+.stitle-sub:after {
+  content: " ー";
+}
+
+.stitle-sub-do:before, .stitle-sub-do:after {
+  color: #e50011;
+  opacity: .7;
+}
+
+.stitle-sub-folio {
+  margin: 0;
+}
+.stitle-sub-folio:before, .stitle-sub-folio:after {
+  color: #fff000;
+  opacity: .7;
+}
+
+.stitle-sub-others:before, .stitle-sub-others:after {
+  color: #00a0e8;
+  opacity: .7;
+}
+
+/* 矢印付きリスト */
+.arrowlink {
+  position: relative;
+  padding: 0 0 0 .7em;
+}
+.arrowlink:before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: .5em;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: .3em solid transparent;
+}
+
+.link-about:before {
+  border-left-color: #009943;
+}
+
+.link-do:before {
+  border-left-color: #e50011;
+}
+
+.link-folio:before {
+  border-left-color: #fff000;
+}
+
+.link-sche:before {
+  border-left-color: #1c1f87;
+}
+
+.link-inquiry:before {
+  border-left-color: #e4007e;
+}
+
+.link-others:before {
+  border-left-color: #00a0e8;
+}
+
+.link-bility:before {
+  border-left-color: white;
+}
+
+/* 定義リスト */
+.dlist01 dt {
+  float: left;
+  margin: 0 1em 0 0;
+  clear: both;
+}
+.dlist01 dt:after {
+  content: "：";
+}
+.dlist01 dd {
+  overflow: hidden;
+}
+
+.dlist01-about dt {
+  width: 8em;
+}
+
+.dlist02 dd {
+  margin: 0;
+}
+.dlist02 .schedule-datevenue {
+  font-weight: bold;
+}
+
+/* リスト */
+.rlist {
+  padding: 0 0 0 1em;
+  list-style: none;
+}
+.rlist li:before {
+  content: "● ";
+  color: #e50011;
+}
+
+/* ポートフォリオ */
+.webfolio {
+  float: left;
+  width: 48%;
+}
+
+.drumfolio {
+  float: right;
+  width: 48%;
+}
+.drumfolio .drumfolio-item {
+  overflow: hidden;
+}
+.drumfolio .drumfolio-item video {
+  width: 380px;
+}
+
+@media (max-width: 50em) {
+  .webfolio {
+    float: none;
+    width: 100%;
+  }
+  .webfolio #webfolio-slider {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .drumfolio {
+    float: none;
+    width: 100%;
+  }
+  .drumfolio #drumfolio-slider {
+    width: 380px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 26em) {
+  .drumfolio #drumfolio-slider {
+    width: 300px;
+  }
+  .drumfolio #drumfolio-slider video {
+    width: 300px;
+  }
+}
+/* スケジュール */
+#stitle-sche {
+  clear: both;
+}
+
+/* Sau */
+.Sau-pic {
+  float: right;
+  margin: 0 0 0 20px;
+}
+
+@media (max-width: 46em) {
+  .Sau-pic {
+    float: none;
+    margin: 0;
+  }
+  .Sau-pic img {
+    display: block;
+    width: 100%;
+    height: auto;
+    width: 280px;
+    margin: 0 auto;
+  }
+}
+/* インスピレーション */
+.inspiration-entry {
+  border-bottom: 1px dotted #fff;
+}
+.inspiration-entry:last-child {
+  border: none;
+}
+.inspiration-entry h4 {
+  width: 30em;
+  margin: 1em auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.inspiration-entry a {
+  word-wrap: break-word;
+}
+
+@media (max-width: 50em) {
+  .inspiration-entry h4 {
+    width: auto;
+    white-space: normal;
+  }
+}
+/* 達成基準リスト */
+.tbl th {
+  padding: .2em;
+  border: 1px #aaa solid;
+}
+.tbl td {
+  padding: .2em;
+  border: 1px #aaa solid;
+}
+
+.backtotop {
+  text-align: right;
+}
+
+/* フッター */
+.footer {
+  padding: 2em 0;
+}
+
+.remark {
+  text-align: center;
+  font-size: 0.875em;
+}
+
+.copyright {
+  text-align: center;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Image replacement
+ */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+}
+.ie6 .ir, .ie7 .ir {
+  text-indent: -9999px;
+}
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * blockskip
+ */
+.blockskip {
+  z-index: 9999;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.ie6 .blockskip {
+  position: relative;
+}
+.blockskip a {
+  display: block;
+  float: left;
+  background: #fff;
+  width: 100%;
+  /*	min-width: 980px; */
+  height: 1px;
+  margin: -1px 0 0 0;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.07143em;
+  color: #000;
+  line-height: 0;
+  cursor: default;
+  overflow: hidden;
+}
+.blockskip a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.blockskip a.show {
+  color: #000;
+  /* height: 1em; */
+  height: auto;
+  margin-top: -3px;
+  padding: 5px 0;
+  font-size: 1em;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before, .clearfix:after,
+.sns:before,
+.sns:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.clearfix:after,
+.sns:after {
+  clear: both;
+}
+.ie6 .clearfix, .ie7 .clearfix, .ie6
+.sns, .ie7
+.sns {
+  /* For IE 6/7 only Include this rule to trigger hasLayout and contain floats. */
+  zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+@media print {
+  * {
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
