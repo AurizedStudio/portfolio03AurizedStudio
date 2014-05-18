@@ -41,12 +41,8 @@ grunt.initConfig({
 //			files: 'htdocs/img/*.png',
 //			tasks: ['imageoptim']
 //		},
-//		css: {
-//			files: 'htdocs/css/*.css',
-//			tasks: ['autoprefixer']
-//		},
 		html: {
-			files: ['htdocs/*.html', 'htdocs/img/*.*', 'htdocs/js/*.*'],
+			files: ['htdocs/index.html', 'htdocs/img/*.*', 'htdocs/js/*.*'],
 			options: {
 				livereload: false,
 			}
@@ -57,6 +53,10 @@ grunt.initConfig({
 			options: {
 				livereload: false,
 			}
+		},
+		css: {
+			files: 'htdocs/css/*.css',
+			tasks: ['autoprefixer']
 		}
 	},
 	browserSync: {
@@ -79,8 +79,7 @@ grunt.initConfig({
 	}
 });
 
-grunt.registerTask('default', ['connect', 'browserSync', 'watch', 'autoprefixer']);
-grunt.registerTask('pre', ['autoprefixer']);
+grunt.registerTask('default', ['connect', 'browserSync', 'watch']);
 grunt.registerTask('imgbuild', ['imageoptim']);
 grunt.registerTask('stats', ['stylestats']);
  
