@@ -1,12 +1,12 @@
 module.exports = function (grunt) {
- 
+
 grunt.loadNpmTasks('grunt-contrib-connect');
 grunt.loadNpmTasks('grunt-contrib-sass');
 grunt.loadNpmTasks('grunt-autoprefixer');
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-browser-sync');
 grunt.loadNpmTasks('grunt-stylestats');
- 
+
 grunt.initConfig({
 	connect: {
 		uses_defaults: {}
@@ -69,7 +69,7 @@ grunt.initConfig({
 			},
 			options: {
 				watchTask: true,
-				proxy: "192.168.0.5:8000"
+				proxy: "192.168.0.3:8000"
 //				proxy: "192.168.24.53:8000"
 			}
 		}
@@ -82,5 +82,5 @@ grunt.initConfig({
 grunt.registerTask('default', ['connect', 'browserSync', 'watch']);
 grunt.registerTask('imgbuild', ['imageoptim']);
 grunt.registerTask('stats', ['stylestats']);
- 
+
 };
