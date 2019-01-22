@@ -69,7 +69,7 @@ grunt.initConfig({
 			},
 			options: {
 				watchTask: true,
-				proxy: "192.168.0.5:8000"
+				proxy: "192.168.0.4:8000"
 //				proxy: "192.168.24.53:8000"
 			}
 		}
