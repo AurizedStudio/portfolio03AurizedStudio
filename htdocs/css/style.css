@@ -6,7 +6,7 @@ button,
 input,
 select,
 textarea {
-  color: white;
+  color: #fff;
 }
 
 body {
@@ -14,8 +14,8 @@ body {
   background-repeat: repeat;
   background-color: #000;
   line-height: 1.5;
-  font-family: Arial, Century Gothic, Verdana, Roboto, "Droid Sans", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
-  color: white;
+  font-family: "Noto Sans Japanese", sans-serif;
+  color: #fff;
 }
 
 a {
@@ -280,6 +280,7 @@ textarea {
 
 /* セクションタイトル */
 .stitle {
+  margin: 30px 0 10px;
   text-align: center;
   border-radius: 2px;
 }
@@ -316,7 +317,7 @@ textarea {
 }
 
 #stitle-bility .stitle {
-  background-color: white;
+  background-color: #fff;
   background-color: rgba(255, 255, 255, 0.7);
   color: #000;
 }
@@ -390,7 +391,7 @@ textarea {
 }
 
 .link-bility:before {
-  border-left-color: white;
+  border-left-color: #fff;
 }
 
 /* 定義リスト */
@@ -741,3 +742,4 @@ textarea {
     page-break-after: avoid;
   }
 }
+/*# sourceMappingURL=style.css.map */
